@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-	// Definir Hashes de:
-	// Parametros (Speed, Attack, Damage, Dead)
+    // Definir Hashes de:
+    // Parametros (Speed, Attack, Damage, Dead)
+    float speedHash;
+    float attackHash;
+    float damageHash;
+    float deadHash;
 	// Estados (Base Layer.Idle, Attack Layer.Idle, Attack Layer.Attack)
 	// TODO
 
@@ -22,10 +26,12 @@ public class PlayerBehaviour : MonoBehaviour
 	int _lives = 3;							// Vidas restantes
 	public bool paused = false;				// Indica si el player esta pausado (congelado). Que no responde al Input
 
+    public Animator animController = null;
 	void Start()
 	{
 		// Obtener los componentes Animator, Rigidbody y el valor original center.z del BoxCollider
 		// TODO
+
 	}
 
 	// Aqui moveremos y giraremos la araña en funcion del Input
